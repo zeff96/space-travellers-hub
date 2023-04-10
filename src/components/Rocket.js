@@ -7,7 +7,10 @@ export default function Rocket({ rocket }) {
       <img className="img" src={rocket.flickr_images[0]} alt={rocket.name} />
       <div>
         <h3 className="name">{rocket.rocket_name}</h3>
-        <p className="description">{rocket.description}</p>
+        <p className="description">
+          <span className="reserve-badge">reserved</span>
+          {rocket.description}
+        </p>
         <button
           className={reserve ? "reserve-btn" : "cancel-reserve-btn"}
           type="button"
