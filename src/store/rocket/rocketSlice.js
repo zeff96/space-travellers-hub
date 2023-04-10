@@ -30,4 +30,5 @@ export const rocketSlice = createSlice({
   },
 });
 
+export const selectedRockets = (state) => state.rockets;
 export default rocketSlice.reducer;
