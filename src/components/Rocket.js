@@ -6,7 +6,7 @@ export default function Rocket({ rocket }) {
       <div>
         <h3 className="name">{rocket.name}</h3>
         <p className="description">{rocket.description}</p>
-        <button className="reverse-btn" type="button">
+        <button className="reserve-btn" type="button">
           Reserve Rocket
         </button>
       </div>
