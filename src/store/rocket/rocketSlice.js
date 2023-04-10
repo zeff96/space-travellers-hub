@@ -31,6 +31,11 @@ export const rocketSlice = createSlice({
           ? rocket
           : { ...rocket, reserved: true };
       });
+
+      return {
+        ...state,
+        rockets: newState,
+      };
     },
   },
   extraReducers(builder) {
@@ -59,5 +64,5 @@ export const rocketSlice = createSlice({
       }));
   },
 });
-
+export const { toggleReserve } = rocketSlice.actions;
 export default rocketSlice.reducer;

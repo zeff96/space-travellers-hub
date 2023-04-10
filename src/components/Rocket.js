@@ -1,24 +1,27 @@
-import { useState } from "react";
 import "./Rocket.scss";
+import { toggleReserve } from "../store/rocket/rocketSlice";
+import { useDispatch } from "react-redux";
+
 export default function Rocket({ rocket }) {
-  const [reserve, setReserve] = useState(true);
+  const dispatch = useDispatch();
+
   return (
     <div className="rocket_wrapper">
       <img className="img" src={rocket.flickr_images[0]} alt={rocket.name} />
       <div>
         <h3 className="name">{rocket.rocket_name}</h3>
         <p className="description">
-          <span className="reserve-badge">reserved</span>
+          {rocket.reserved && <span className="reserve-badge">reserved</span>}
           {rocket.description}
         </p>
         <button
-          className={reserve ? "reserve-btn" : "cancel-reserve-btn"}
+          className={rocket.reserved ? "cancel-reserve-btn" : "reserve-btn"}
           type="button"
           onClick={() => {
-            setReserve(!reserve);
+            dispatch(toggleReserve(rocket.id));
           }}
         >
-          {reserve ? "Reserve Rocket" : "Cancel Reservation"}
+          {!rocket.reserved ? "Reserve Rocket" : "Cancel Reservation"}
         </button>
       </div>
     </div>
