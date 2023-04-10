@@ -8,7 +8,7 @@ export default function Rocket({ rocket }) {
   return (
     <div className="rocket_wrapper">
       <img className="img" src={rocket.flickr_images[0]} alt={rocket.name} />
-      <div>
+      <div className="rocket-details">
         <h3 className="name">{rocket.rocket_name}</h3>
         <p className="description">
           {rocket.reserved && <span className="reserve-badge">reserved</span>}
