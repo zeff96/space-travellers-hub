@@ -1,4 +1,5 @@
 import "./Rocket.scss";
+import PropTypes from "prop-types";
 import { addReserve, cancelReservation } from "../store/rocket/rocketSlice";
 import { useDispatch } from "react-redux";
 
@@ -7,7 +8,11 @@ export default function Rocket({ rocket }) {
 
   return (
     <div className="rocket_wrapper">
-      <img className="img" src={rocket.flickr_images[0]} alt={rocket.name} />
+      <img
+        className="img"
+        src={rocket.flickr_images[0]}
+        alt={rocket.rocket_name}
+      />
       <div className="rocket-details">
         <h3 className="name">{rocket.rocket_name}</h3>
         <p className="description">
@@ -34,3 +39,13 @@ export default function Rocket({ rocket }) {
     </div>
   );
 }
+
+Rocket.propTypes = {
+  rocket: PropTypes.shape({
+    id: PropTypes.string,
+    rocket_name: PropTypes.string,
+    description: PropTypes.string,
+    reserved: PropTypes.bool,
+    flickr_images: PropTypes.element,
+  }).isRequired,
+};
