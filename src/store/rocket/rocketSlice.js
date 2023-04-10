@@ -24,6 +24,15 @@ export const getRocketsAsync = createAsyncThunk(
 export const rocketSlice = createSlice({
   name: "rockets",
   initialState,
+  reducers: {
+    toggleReserve(state, action) {
+      const newState = state.rockets.map((rocket) => {
+        return rocket.id !== action.payload
+          ? rocket
+          : { ...rocket, reserved: true };
+      });
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(getRocketsAsync.pending, (state) => ({
