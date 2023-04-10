@@ -4,8 +4,17 @@
 }
 
 .img {
-  width: 30rem;
+  width: 20rem;
   aspect-ratio: auto;
+}
+
+.reserve-badge {
+  background-color: teal;
+  color: white;
+  text-transform: capitalize;
+  margin-right: 0.5rem;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .reserve-btn {
