@@ -1,15 +1,10 @@
 import Rocket from "./Rocket";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  getRocketsAsync,
-  selectedRockets,
-  loading,
-  errorMessage,
-} from "../store/rocket/rocketSlice";
+import { getRocketsAsync } from "../store/rocket/rocketSlice";
 import { useEffect } from "react";
 
 export default function Rockets() {
-  const rockets = useSelector(selectedRockets);
+  const { rockets, isLoading, error } = useSelector((state) => state.rockets);
 
   const dispatch = useDispatch();
 
@@ -25,8 +20,8 @@ export default function Rockets() {
 
   return (
     <div>
-      {loading && <h2>Loading...</h2>}
-      {errorMessage && <p>{errorMessage}</p>}
+      {isLoading && <h2>Loading...</h2>}
+      {error && <p>{error}</p>}
       <ul>{listRockets}</ul>
     </div>
   );
