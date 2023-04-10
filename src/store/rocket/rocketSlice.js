@@ -22,7 +22,12 @@ export const getRocketsAsync = createAsyncThunk(
 export const rocketSlice = createSlice({
   name: "rockets",
   initialState,
-  extraReducers: {},
+  extraReducers(builder) {
+    builder.addCase(getRocketsAsync.fulfilled, (state, action) => ({
+      ...state,
+      rockets: action.payload,
+    }));
+  },
 });
 
 export default rocketSlice.reducer;
