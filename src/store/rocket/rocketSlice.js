@@ -25,10 +25,21 @@ export const rocketSlice = createSlice({
   name: "rockets",
   initialState,
   extraReducers(builder) {
-    builder.addCase(getRocketsAsync.fulfilled, (state, action) => ({
-      ...state,
-      rockets: action.payload,
-    }));
+    builder
+      .addCase(getRocketsAsync.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(getRocketsAsync.fulfilled, (state, action) => ({
+        ...state,
+        rockets: action.payload,
+        isLoading: false,
+      }))
+      .addCase(getRocketsAsync.rejected, (state, action) => ({
+        ...state,
+        isLoading: false,
+        error: action.error.message,
+      }));
   },
 });
 
