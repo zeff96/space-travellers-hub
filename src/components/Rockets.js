@@ -1,4 +1,5 @@
 import Rocket from "./Rocket";
+import "./Rockets.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { getRocketsAsync } from "../store/rocket/rocketSlice";
 import { useEffect } from "react";
@@ -20,9 +21,9 @@ export default function Rockets() {
 
   return (
     <div>
-      {isLoading && <h2>Loading...</h2>}
-      {error && <p>{error}</p>}
-      <ul>{listRockets}</ul>
+      {isLoading && <h2 className="loading">Loading...</h2>}
+      {error && <p className="error">{error}</p>}
+      <ul className="rocket-list">{listRockets}</ul>
     </div>
   );
 }
