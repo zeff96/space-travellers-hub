@@ -1,5 +1,5 @@
 import "./Rocket.scss";
-import { toggleReserve } from "../store/rocket/rocketSlice";
+import { addReserve, cancelReservation } from "../store/rocket/rocketSlice";
 import { useDispatch } from "react-redux";
 
 export default function Rocket({ rocket }) {
@@ -14,15 +14,22 @@ export default function Rocket({ rocket }) {
           {rocket.reserved && <span className="reserve-badge">reserved</span>}
           {rocket.description}
         </p>
-        <button
-          className={rocket.reserved ? "cancel-reserve-btn" : "reserve-btn"}
-          type="button"
-          onClick={() => {
-            dispatch(toggleReserve(rocket.id));
-          }}
-        >
-          {!rocket.reserved ? "Reserve Rocket" : "Cancel Reservation"}
-        </button>
+        {rocket.reserved && (
+          <button
+            className="cancel-reserve-btn"
+            onClick={() => dispatch(cancelReservation(rocket.id))}
+          >
+            Cancel Reservation
+          </button>
+        )}
+        {!rocket.reserved && (
+          <button
+            className="reserve-btn"
+            onClick={() => dispatch(addReserve(rocket.id))}
+          >
+            Reserve Rocket
+          </button>
+        )}
       </div>
     </div>
   );
