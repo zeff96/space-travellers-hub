@@ -30,11 +30,19 @@ export const rocketSlice = createSlice({
         ...state,
         isLoading: true,
       }))
-      .addCase(getRocketsAsync.fulfilled, (state, action) => ({
-        ...state,
-        rockets: action.payload,
-        isLoading: false,
-      }))
+      .addCase(getRocketsAsync.fulfilled, (state, action) => {
+        const rocketList = action.payload.map((rocket) => ({
+          id: rocket.id,
+          rocket_name: rocket.name,
+          description: rocket.description,
+          flickr_images: rocket.flickr_images,
+        }));
+        return {
+          ...state,
+          rockets: rocketList,
+          isLoading: false,
+        };
+      })
       .addCase(getRocketsAsync.rejected, (state, action) => ({
         ...state,
         isLoading: false,
