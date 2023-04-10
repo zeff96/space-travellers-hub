@@ -1,6 +1,11 @@
 import Rocket from "./Rocket";
 import { useSelector, useDispatch } from "react-redux";
-import { getRocketsAsync, selectedRockets } from "../store/rocket/rocketSlice";
+import {
+  getRocketsAsync,
+  selectedRockets,
+  loading,
+  errorMessage,
+} from "../store/rocket/rocketSlice";
 import { useEffect } from "react";
 
 export default function Rockets() {
@@ -18,5 +23,11 @@ export default function Rockets() {
     </li>
   ));
 
-  return <ul>{listRockets}</ul>;
+  return (
+    <div>
+      {loading && <h2>Loading...</h2>}
+      {errorMessage && <p>{errorMessage}</p>}
+      <ul>{listRockets}</ul>
+    </div>
+  );
 }

@@ -44,4 +44,6 @@ export const rocketSlice = createSlice({
 });
 
 export const selectedRockets = (state) => state.rockets.rockets;
+export const loading = (state) => state.rockets.isLoading;
+export const errorMessage = (state) => state.rockets.error;
 export default rocketSlice.reducer;
