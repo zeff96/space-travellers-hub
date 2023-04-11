@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
 function ReservedRocket({ rocket }) {
-  return <p>{rocket.rocket_name}</p>;
+  return <>{rocket.rocket_name}</>;
 }
 
 export default function ReservedRockets() {
@@ -17,3 +18,9 @@ export default function ReservedRockets() {
 
   return <ul className="list-unstyled list-group">{listRockets}</ul>;
 }
+
+ReservedRocket.propTypes = {
+  rocket: PropTypes.shape({
+    rocket_name: PropTypes.string,
+  }).isRequired,
+};

@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
 function MissionJoined({ mission }) {
-  return <p>{mission.name}</p>;
+  return <>{mission.name}</>;
 }
 
 export default function MissionsJoined() {
@@ -17,3 +18,9 @@ export default function MissionsJoined() {
 
   return <ul className="list-unstyled list-group">{listMissions}</ul>;
 }
+
+MissionJoined.propTypes = {
+  mission: PropTypes.shape({
+    name: PropTypes.string,
+  }).isRequired,
+};
