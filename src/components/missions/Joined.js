@@ -6,7 +6,7 @@ function MissionJoined({ mission }) {
 
 export default function MissionsJoined() {
   const missions = useSelector((state) =>
-    state.missions.mission.filter((mission) => mission.joined === true)
+    state.missions.missions.filter((mission) => mission.joined === true)
   );
 
   const listMissions = missions.map((mission) => (
