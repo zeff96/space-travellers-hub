@@ -6,12 +6,13 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container my-5">
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Rockets />} />
         <Route exact path="/myProfile" element={<MyProfile />} />
       </Routes>
+      <Rockets />
     </div>
   );
 }
