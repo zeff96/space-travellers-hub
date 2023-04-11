@@ -1,4 +1,5 @@
-import './myProfile.scss';
+import "./myProfile.scss";
+import ReservedRockets from "../Rockets/Reserved";
 
 const MyProfile = () => {
   return (
@@ -9,9 +10,10 @@ const MyProfile = () => {
 
       <div className="col-6">
         <h1>My Rockets</h1>
+        <ReservedRockets />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MyProfile
+export default MyProfile;

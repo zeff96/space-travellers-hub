@@ -11,7 +11,7 @@ export default function ReservedRockets() {
 
   const listRockets = rockets.map((rocket) => (
     <li key={rocket.id}>
-      <ReservedRocket />
+      <ReservedRocket rocket={rocket} />
     </li>
   ));
 
