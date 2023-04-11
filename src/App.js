@@ -3,11 +3,11 @@ import Missions from "./components/missions/Missions";
 import Rockets from "./components/Rockets/Rockets";
 import MyProfile from "./components/myProfile/MyProfile";
 import Navbar from "./components/navbar/Navbar";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container my-5">
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Rockets />} />

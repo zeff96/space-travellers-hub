@@ -2,14 +2,14 @@ a {
   text-decoration: none;
 }
 
-li {
+.list-item {
   list-style: none;
 }
 
-ul li:last-child {
+.list .list-item:last-child {
   border-left: 1px solid black;
 }
 
-ul li .active {
+.list .list-item .active {
   text-decoration: underline !important;
 }
