@@ -15,5 +15,5 @@ export default function MissionsJoined() {
     </li>
   ));
 
-  return <ul>{listMissions}</ul>;
+  return <ul className="list-unstyled list-group">{listMissions}</ul>;
 }
