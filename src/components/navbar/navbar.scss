@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.list .list-item:last-child {
+  border-left: 1px solid black;
+}
+
+.list .list-item .active {
+  text-decoration: underline !important;
+}
