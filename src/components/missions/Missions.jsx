@@ -11,6 +11,8 @@ const Missions = () => {
   }, [dispatch]);
   return (
     <div className="container-fluid d-none d-md-block">
+      {isLoading && (<h1>Loading Missions..</h1>)}
+      {error && (<h1>{error}</h1>) }
       <table className="table table-bordered table-striped container border mt-5 mb-5">
         <tbody>
           <tr>
