@@ -12,7 +12,6 @@ function App() {
         <Route exact path="/" element={<Rockets />} />
         <Route exact path="/myProfile" element={<MyProfile />} />
       </Routes>
-      <Rockets />
     </div>
   );
 }
