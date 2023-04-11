@@ -10,10 +10,10 @@ export default function ReservedRockets() {
   );
 
   const listRockets = rockets.map((rocket) => (
-    <li key={rocket.id}>
+    <li key={rocket.id} className="list-group-item">
       <ReservedRocket rocket={rocket} />
     </li>
   ));
 
-  return <ul>{listRockets}</ul>;
+  return <ul className="list-unstyled list-group">{listRockets}</ul>;
 }
