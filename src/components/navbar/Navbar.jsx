@@ -1,6 +1,7 @@
 import logo from "../../assets/planet.png";
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.scss";
+import { useState } from "react";
 
 const Navbar = () => {
   const links = [
@@ -9,9 +10,14 @@ const Navbar = () => {
     { id: 3, path: "/myProfile", text: "My Profile" },
   ];
 
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  function handleToggle() {
+    return setIsCollapsed(!isCollapsed);
+  }
+
   return (
-    <header>
-      <nav className="d-flex justify-content-between align-items-center px-4 pt-2 mb-4 border-bottom">
+    <nav className="navbar navbar-expand-md bg-body-light">
+      <div className="container-fluid">
         <div>
           <Link to="/" className="navbar-brand">
             <img src={logo} alt="Logo" style={{ width: "2em" }} />
@@ -19,18 +25,33 @@ const Navbar = () => {
               Space Travelers&apos; Hub
             </span>
           </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-target="#navbar"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded={isCollapsed ? true : false}
+            aria-label="Toggle navigation"
+            onClick={handleToggle}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
         </div>
-        <div>
-          <ul className="d-flex list">
+        <div
+          className={`${isCollapsed ? "collapse" : ""} navbar-collapse`}
+          id="navbar"
+        >
+          <ul className="navbar-nav me-auto">
             {links.map((link) => (
-              <li key={link.id} className="px-3 list-item">
+              <li key={link.id} className="nav-item">
                 <NavLink to={link.path}>{link.text}</NavLink>
               </li>
             ))}
           </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 

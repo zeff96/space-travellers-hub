@@ -7,14 +7,14 @@ export default function Rocket({ rocket }) {
 
   return (
     <div className="row mb-5">
-      <div className="col-sm-4">
+      <div className="col-md-5 col-lg-4">
         <img
           className="img-fluid"
           src={rocket.flickr_images[0]}
           alt={rocket.rocket_name}
         />
       </div>
-      <div className="col-sm-8">
+      <div className="col-md-7 col-lg-8">
         <h3 className="name">{rocket.rocket_name}</h3>
         <p className="description">
           {rocket.reserved && (
