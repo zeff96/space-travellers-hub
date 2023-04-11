@@ -10,7 +10,7 @@ export default function MissionsJoined() {
   );
 
   const listMissions = missions.map((mission) => (
-    <li key={mission.id}>
+    <li key={mission.id} className="list-group-item">
       <MissionJoined mission={mission} />
     </li>
   ));
