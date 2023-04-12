@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   fetchMissions,
   missionStatus,
-} from "../../store/missions/missionSlice";
+} from "../../redux/missions/missionSlice";
 import { useEffect } from "react";
 import "./missions.scss";
 

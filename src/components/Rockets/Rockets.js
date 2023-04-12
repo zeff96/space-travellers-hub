@@ -1,6 +1,6 @@
 import Rocket from "./Rocket";
 import { useSelector, useDispatch } from "react-redux";
-import { getRocketsAsync } from "../../store/rocket/rocketSlice";
+import { getRocketsAsync } from "../../redux/rocket/rocketSlice";
 import { useEffect } from "react";
 
 export default function Rockets() {

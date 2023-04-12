@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { addReserve, cancelReservation } from "../../store/rocket/rocketSlice";
+import { addReserve, cancelReservation } from "../../redux/rocket/rocketSlice";
 import { useDispatch } from "react-redux";
 
 export default function Rocket({ rocket }) {
