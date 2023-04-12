@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-const initialState = {
+export const initialState = {
   rockets: [],
   isLoading: true,
   error: null,
@@ -13,8 +12,9 @@ export const getRocketsAsync = createAsyncThunk(
   'rockets/getRocketsAsyn',
   async () => {
     try {
-      const respone = await axios.get(baseURl);
-      return respone.data;
+      const respone = await fetch(baseURl);
+      const data = await respone.json();
+      return data;
     } catch (e) {
       return e.message;
     }
@@ -26,9 +26,10 @@ export const rocketSlice = createSlice({
   initialState,
   reducers: {
     addReserve(state, action) {
-      const newState = state.rockets.map((rocket) => (rocket.id !== action.payload
-        ? rocket
-        : { ...rocket, reserved: true }));
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: true };
+      });
 
       return {
         ...state,
@@ -36,9 +37,10 @@ export const rocketSlice = createSlice({
       };
     },
     cancelReservation(state, action) {
-      const newState = state.rockets.map((rocket) => (rocket.id !== action.payload
-        ? rocket
-        : { ...rocket, reserved: false }));
+      const newState = state.rockets.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: false };
+      });
 
       return {
         ...state,

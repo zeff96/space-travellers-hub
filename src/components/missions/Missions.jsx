@@ -16,7 +16,10 @@ const Missions = () => {
     <div className="container-fluid">
       {isLoading && <h1>Loading Missions..</h1>}
       {error && <h1>{error}</h1>}
-      <table className="table table-bordered table-striped container border mt-5 mb-5">
+      <table
+        className="table table-bordered table-striped container border mt-5 mb-5"
+        data-testid="table"
+      >
         <tbody>
           <tr>
             <th>Mission</th>
@@ -48,6 +51,7 @@ const Missions = () => {
                       : 'btn-outline-secondary'
                   }`}
                   onClick={() => dispatch(missionStatus(mission))}
+                  data-testid="mission"
                 >
                   {mission.joined ? 'Leave Mission' : 'Join Mission'}
                 </button>

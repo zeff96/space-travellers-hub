@@ -29,6 +29,7 @@ export default function Rocket({ rocket }) {
             type="button"
             className="btn btn-outline-secondary btn-lg"
             onClick={() => dispatch(cancelReservation(rocket.id))}
+            data-testid="cancel"
           >
             Cancel Reservation
           </button>
@@ -38,6 +39,7 @@ export default function Rocket({ rocket }) {
             type="button"
             className="btn btn-primary btn-lg"
             onClick={() => dispatch(addReserve(rocket.id))}
+            data-testid="reserve"
           >
             Reserve Rocket
           </button>

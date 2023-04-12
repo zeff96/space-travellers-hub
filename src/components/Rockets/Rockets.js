@@ -22,7 +22,9 @@ export default function Rockets() {
     <div>
       {isLoading && <h2 className="loading">Loading...</h2>}
       {error && <p className="error">{error}</p>}
-      <ul className="list-unstyled d-flex flex-column">{listRockets}</ul>
+      <ul className="list-unstyled d-flex flex-column" data-testid="rockets">
+        {listRockets}
+      </ul>
     </div>
   );
 }
