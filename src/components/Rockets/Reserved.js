@@ -1,14 +1,14 @@
-import { useSelector } from "react-redux";
-import PropTypes from "prop-types";
+import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function ReservedRocket({ rocket }) {
   return <>{rocket.rocket_name}</>;
 }
 
 export default function ReservedRockets() {
-  const rockets = useSelector((state) =>
-    state.rockets.rockets.filter((rocket) => rocket.reserved === true)
-  );
+  const selectedRocked = useSelector((state) => state.rockets.rockets);
+
+  const rockets = selectedRocked.filter((rocket) => rocket.reserved === true);
 
   const listRockets = rockets.map((rocket) => (
     <li key={rocket.id} className="list-group-item">

@@ -1,13 +1,14 @@
-import { useSelector } from "react-redux";
-import PropTypes from "prop-types";
+import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function MissionJoined({ mission }) {
   return <>{mission.name}</>;
 }
 
 export default function MissionsJoined() {
-  const missions = useSelector((state) =>
-    state.missions.missions.filter((mission) => mission.joined === true)
+  const selectedMissions = useSelector((state) => state.missions.missions);
+  const missions = selectedMissions.filter(
+    (mission) => mission.joined === true,
   );
 
   const listMissions = missions.map((mission) => (
