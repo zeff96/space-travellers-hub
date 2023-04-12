@@ -1,15 +1,23 @@
-a {
-  text-decoration: none;
+.list:nth-child(3) {
+  position: relative;
+}
+
+.list:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1rem;
+  border: 1px solid gray;
 }
 
 .list-item {
-  list-style: none;
+  color: blue;
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
-.list .list-item:last-child {
-  border-left: 1px solid black;
-}
-
-.list .list-item .active {
+.active {
   text-decoration: underline !important;
 }

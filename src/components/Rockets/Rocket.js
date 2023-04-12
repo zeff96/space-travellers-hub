@@ -6,15 +6,15 @@ export default function Rocket({ rocket }) {
   const dispatch = useDispatch();
 
   return (
-    <div className="row mb-5">
-      <div className="col-sm-4">
+    <div className="row mb-3">
+      <div className="col-md-6 col-lg-4">
         <img
           className="img-fluid"
           src={rocket.flickr_images[0]}
           alt={rocket.rocket_name}
         />
       </div>
-      <div className="col-sm-8">
+      <div className="col-md-6 col-lg-8">
         <h3 className="name">{rocket.rocket_name}</h3>
         <p className="description">
           {rocket.reserved && (
