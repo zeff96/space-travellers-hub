@@ -1,4 +1,3 @@
-import './myProfile.scss';
 import ReservedRockets from '../Rockets/Reserved';
 import MissionsJoined from '../missions/Joined';
 
