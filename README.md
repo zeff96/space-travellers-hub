@@ -34,14 +34,17 @@
 
 ## Built With
 
-- HTML
-- Sass
 - Bootstrap 5
-- JavaScript
 - React
 - Redux
 - Jest
 - API
+
+## Tech Stack
+
+- HTML
+- Sass
+- JavaScript
 
 ### Key Features
 
@@ -51,7 +54,7 @@
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://spacex-5sr1.onrender.com/)
 
 ## Getting Started
 
@@ -60,22 +63,32 @@
 Clone this repository to your desired folder:
 
 ```sh
-  cd your-prefer-folder
-  git git@github.com:zeff96/space-travellers-hub.git
+cd your-prefer-folder
+git clone git@github.com:zeff96/space-travellers-hub.git
 ```
 
-### Run this command to install dependencies
+### Prerequisites:
 
-> npx create-react-app my-app
-> npm install @reduxjs/toolkit react-redux
+**you can run any one of these commands to install npm on your machine:**
 
-### Run this command to run server
+- npm i
+- npm install
+- sudo apt install npm
 
-> npm start
+**to install globally, just add a -g or --global after the install or i**
 
-### Run this command to run test
+- npm i -g
+- sudo apt install -g npm
 
-> npm run test
+### Install
+
+2- Install npm (node pakage manager)
+
+### Usage
+
+```sh
+  use git bash to open in Vs code;
+```
 
 ## 👥 Authors <a name="authors"></a>
 
