@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import { addReserve, cancelReservation } from "../../redux/rocket/rocketSlice";
-import { useDispatch } from "react-redux";
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { addReserve, cancelReservation } from '../../redux/rocket/rocketSlice';
 
 export default function Rocket({ rocket }) {
   const dispatch = useDispatch();
@@ -26,6 +26,7 @@ export default function Rocket({ rocket }) {
         </p>
         {rocket.reserved && (
           <button
+            type="button"
             className="btn btn-outline-secondary btn-lg"
             onClick={() => dispatch(cancelReservation(rocket.id))}
           >
@@ -34,6 +35,7 @@ export default function Rocket({ rocket }) {
         )}
         {!rocket.reserved && (
           <button
+            type="button"
             className="btn btn-primary btn-lg"
             onClick={() => dispatch(addReserve(rocket.id))}
           >
@@ -51,6 +53,6 @@ Rocket.propTypes = {
     rocket_name: PropTypes.string,
     description: PropTypes.string,
     reserved: PropTypes.bool,
-    flickr_images: PropTypes.array,
+    flickr_images: PropTypes.string,
   }).isRequired,
 };

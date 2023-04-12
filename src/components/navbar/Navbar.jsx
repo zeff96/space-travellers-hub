@@ -1,13 +1,13 @@
-import logo from "../../assets/planet.png";
-import { Link, NavLink } from "react-router-dom";
-import "./navbar.scss";
-import { useState } from "react";
+import { Link, NavLink } from 'react-router-dom';
+import './navbar.scss';
+import { useState } from 'react';
+import logo from '../../assets/planet.png';
 
 const Navbar = () => {
   const links = [
-    { id: 1, path: "/", text: "Rockets" },
-    { id: 2, path: "/missions", text: "Missions" },
-    { id: 3, path: "/myProfile", text: "My Profile" },
+    { id: 1, path: '/', text: 'Rockets' },
+    { id: 2, path: '/missions', text: 'Missions' },
+    { id: 3, path: '/myProfile', text: 'My Profile' },
   ];
 
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-md bg-body-light">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
-          <img src={logo} alt="Logo" style={{ width: "2em" }} />
+          <img src={logo} alt="Logo" style={{ width: '2em' }} />
           <span className="text-dark fs-2 ms-2">Space Travelers&apos; Hub</span>
         </Link>
         <button
@@ -28,14 +28,14 @@ const Navbar = () => {
           data-bs-toggle="collapse"
           data-target="#navbar"
           aria-controls="navbar"
-          aria-expanded={isCollapsed ? true : false}
+          aria-expanded={!!isCollapsed}
           aria-label="Toggle navigation"
           onClick={handleToggle}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
         <div
-          className={`${isCollapsed ? "collapse" : ""} navbar-collapse`}
+          className={`${isCollapsed ? 'collapse' : ''} navbar-collapse`}
           id="navbar"
         >
           <ul className="navbar-nav ms-auto">

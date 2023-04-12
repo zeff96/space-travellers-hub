@@ -1,9 +1,9 @@
-import "./App.scss";
-import Missions from "./components/missions/Missions";
-import Rockets from "./components/Rockets/Rockets";
-import MyProfile from "./components/myProfile/MyProfile";
-import Navbar from "./components/navbar/Navbar";
-import { Routes, Route } from "react-router-dom";
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import Missions from './components/missions/Missions';
+import Rockets from './components/Rockets/Rockets';
+import MyProfile from './components/myProfile/MyProfile';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (

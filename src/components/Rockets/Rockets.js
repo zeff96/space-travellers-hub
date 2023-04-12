@@ -1,7 +1,7 @@
-import Rocket from "./Rocket";
-import { useSelector, useDispatch } from "react-redux";
-import { getRocketsAsync } from "../../redux/rocket/rocketSlice";
-import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import Rocket from './Rocket';
+import { getRocketsAsync } from '../../redux/rocket/rocketSlice';
 
 export default function Rockets() {
   const { rockets, isLoading, error } = useSelector((state) => state.rockets);
