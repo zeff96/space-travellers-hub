@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <img src="./src/assets/planet.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-## Available Scripts
+  <h1><b>Space Travellers-Hub</b></h1>
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+# 📗 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About the Project
 
-### `npm test`
+> This project is a group project for Microverse, It is a space web application that allow users to reserve rockets and join mission of their choice.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `npm run build`
+- Bootstrap 5
+- React
+- Redux
+- Jest
+- API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- HTML
+- Sass
+- JavaScript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Key Features
 
-### `npm run eject`
+- Fetching Rockets and Missions from API
+- Reserve rockets and join missions
+- See reserved rockets and joined missions in my profile page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Live Demo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Live Demo](https://spacex-5sr1.onrender.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setup
 
-## Learn More
+Clone this repository to your desired folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+cd your-prefer-folder
+git clone git@github.com:zeff96/space-travellers-hub.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites:
 
-### Code Splitting
+**you can run any one of these commands to install npm on your machine:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- npm i
+- npm install
+- sudo apt install npm
 
-### Analyzing the Bundle Size
+**to install globally, just add a -g or --global after the install or i**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- npm i -g
+- sudo apt install -g npm
 
-### Making a Progressive Web App
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2- Install npm (node pakage manager)
 
-### Advanced Configuration
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+  use git bash to open in Vs code;
+```
 
-### Deployment
+## 👥 Authors <a name="authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👤 **Adeka Zeffs**
 
-### `npm run build` fails to minify
+- GitHub: [zeff96](https://github.com/zeff96)
+- LinkedIn: [Zeff Adeka](https://www.linkedin.com/in/zeff-adeka-28060820a/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 **George M'sapenda**
+
+- GitHub: [c00p75](https://github.com/c00p75)
+- LinkedIn: [George M'sapenda](ttps://www.linkedin.com/in/georgemsapenda/?originalSubdomain=zm)
+
+## 🔭 Future Features
+
+- Add cancel reservation button on profile page
+- Add links to read more on the wikipedia
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/zeff96/space-travellers-hub/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 🙏 Acknowledgments
+
+I would like to thank Microverse!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
